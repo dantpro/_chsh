@@ -904,7 +904,7 @@ sudo apt install -y filezilla
 # mega
 #
 wget https://mega.nz/linux/repo/xUbuntu_25.10/amd64/megasync-xUbuntu_25.10_amd64.deb
-sudo apt install "$PWD/megasync-xUbuntu_25.10_amd64.deb"
+sudo apt install -y "$PWD/megasync-xUbuntu_25.10_amd64.deb"
 
 # thunderbird
 sudo apt install -y thunderbird thunderbird-locale-ru thunderbird-locale-en-us
@@ -1360,7 +1360,8 @@ echo \
   $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io
 # sudo apt install docker-buildx-plugin docker-compose-plugin
 
 sudo usermod -aG docker $USER

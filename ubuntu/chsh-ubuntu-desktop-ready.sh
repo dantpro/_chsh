@@ -293,6 +293,30 @@ sudo apt install -y pass
 # git gui
 sudo apt install -y lazygit
 
+# gcm
+# https://github.com/git-ecosystem/git-credential-manager
+wget https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.6.1/gcm-linux_amd64.2.6.1.deb
+sudo apt install "$PWD/gcm-linux_amd64.2.6.1.deb"
+
+# /usr/local/bin/git-credential-manager diagnose
+# /usr/local/bin/git-credential-manager configure
+
+# --- ~/.gitconfig
+#
+# [user]
+#    name = username
+#    email = username@domain.dom
+#
+# gcm
+#
+#[credential]
+#    helper =.
+#    helper = /usr/local/bin/git-credential-manager
+#    credentialStore = secretservice
+#[credential "https://dev.azure.com"]
+#    useHttpPath = true
+# ---
+
 # git ppa
 # 
 # sudo add-apt-repository ppa:git-core/ppa

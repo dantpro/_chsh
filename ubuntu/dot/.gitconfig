@@ -1,0 +1,18 @@
+# ~/.gitconfig
+#
+# $Id: .gitconfig,v 1.1 2025/11/23 11:07:55 user Exp $
+
+[user]
+    name = User Name
+    email = username@email.com
+
+# gcm
+#
+[credential]
+    helper = 
+    helper = /usr/local/bin/git-credential-manager
+    credentialStore = secretservice
+[credential "https://dev.azure.com"]
+    useHttpPath = true
+#
+# ---

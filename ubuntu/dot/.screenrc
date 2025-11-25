@@ -1,0 +1,59 @@
+# $Id: .screenrc,v 1.3 2019/10/30 15:00:43 user Exp $
+#
+# ~/.screenrc
+
+shell -$SHELL				# Make the shell in every window as a login shell
+defshell /bin/bash
+
+#escape ``				# use ` instesd of Ctrl-A
+startup_message off			# default: on  (No startup messages)
+autodetach on				# default: off ( Automatically detach on hangup )
+defscrollback 1024			# default: 100 ( Change default scrollback value for new windows )
+crlf off				# default: off
+
+altscreen on
+silencewait 15				# default: 30
+msgminwait 0				# the first message is ignored
+msgwait 10				# default 5 (The last message is displayed for 10 seconds or until keypress)
+
+vbell off				# default: off 
+
+#vbell_msg "   -- Ring, Ring!! --   "	# default: "Wuff,Wuff!!"
+#vbell_msg "bell on %t(%n)"
+
+#activity ""
+activity "Activity in %t(%n)"
+#termcapinfo xterm* 'hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+
+hardstatus alwayslastline
+hardstatus string  '%{= wk} %=%{b} %t(%n) %{r}[%l]' 
+caption always '%{= wk}%?%-Lw%?%{b}[%{k}%n*%f%t%?(%u)%?%{b}]%{k}%?%+Lw%?%?%= %d-%m-%Y %c:%s%{-}'
+
+# Other type of status strings
+#
+#hardstatus string '%{= bb}%{+b w}%n %h %=%t %d-%m-%Y %c'
+#caption always "%{=}%?%{R}%H %L=%{+b}%?%{y}%-Lw%47L>%?%{g}%n*%f %t %?%{y}%+Lw%?%{b}%-31=%c %l %Y-%m-%d"
+#
+#caption always "%{= 45}%{+b w}Screen: %n | %h %=%t %c"
+#hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+#
+#hardstatus alwayslastline '%{= wk}%?%-Lw%?%{r}(%{k}%n*%f%t%?(%u)%?%{r})%{k}%?%+Lw%?%?%= %m/%d %C%A'
+
+# http://www.debian-administration.org/articles/560
+#caption     always        "%{+b rk}%H%{gk} |%c %{yk}%d.%m.%Y | %72=Load: %l %{wk}"
+#hardstatus alwayslastline "%?%{yk}%-Lw%?%{wb}%n*%f %t%?(%u)%?%?%{yk}%+Lw%?"
+
+# logging
+#deflog on
+logfile $HOME/logs/screen_%Y-%m-%d_%0c_%n.log
+
+# starting windows
+chdir					# goto homedir
+screen -t bash 1 bash
+screen -t subash 2 sudo bash
+screen -t mc 3 mc
+screen -t sumc 4 sudo mc
+chdir /var/log				# goto logsr
+screen -t logs 5
+select 3
+

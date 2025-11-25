@@ -1,0 +1,5 @@
+# %sudogroup@contoso.lab ALL=(ALL:ALL) NOPASSWD:ALL
+# %sudogroup ALL=(ALL:ALL) NOPASSWD:ALL
+
+# user@contoso.lab ALL=(ALL:ALL) NOPASSWD:ALL
+# %domain\ admins@contoso.lab ALL=(ALL:ALL) NOPASSWD:ALL

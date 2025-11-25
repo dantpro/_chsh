@@ -1,0 +1,5 @@
+# /etc/default/grub
+#
+# $Id: grub,v 1.2 2025/11/23 07:41:12 root Exp $
+
+GRUB_CMDLINE_LINUX_DEFAULT=""

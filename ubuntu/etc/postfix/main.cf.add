@@ -1,0 +1,15 @@
+# /etc/postfix/main.cf
+#
+# $Id: main.cf,v 1.2 2025/11/23 14:44:26 root Exp $
+
+# ---
+mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 192.168.0.0/24
+
+# ---
+mydestination = $myhostname, cnt-wks-lin-1, cnt-wks-lin-1.contoso.lab, localhost.localdomain, localhost
+
+# ---
+myhostname = cnt-wks-lin-1.contoso.lab
+
+# --- maildir support
+home_mailbox = Maildir/

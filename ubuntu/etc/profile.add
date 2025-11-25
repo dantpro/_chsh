@@ -1,0 +1,7 @@
+# /etc/profile
+#
+# $Id: profile,v 1.2 2025/11/23 15:04:22 root Exp $
+
+# --- maildir support
+#
+export MAIL=~/Maildir

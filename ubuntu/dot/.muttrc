@@ -1,0 +1,58 @@
+set mbox_type=Maildir
+
+# Next configure the locations of the common folders:
+
+set folder="~/Maildir"
+set mask="!^\\.[^.]"
+set mbox="~/Maildir"
+set record="+.Sent"
+set postponed="+.Drafts"
+set spoolfile="~/Maildir"
+
+# Set up mailboxes by scanning for all subfolders in ~/Maildir:
+
+mailboxes `echo -n "+ "; find ~/Maildir -maxdepth 1 -type d -name ".*" -printf "+'%f' "`
+
+#Note that this requires find(1) from the GNU findutils, which on BSD systems usually is installed as gfind(1).
+
+#Add macros to make the folder browser usable by always using the mailboxes setup above:
+
+macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+macro pager c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+
+#To additionally get straight to the folder browser when copying, moving and attaching mail, add the following macros:
+
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+macro compose A "<attach-message>?<toggle-mailboxes>" "attach message(s) to this message"
+
+
+#set sidebar_visible = yes
+
+#bind index,pager B sidebar-toggle-visible
+
+
+#mailboxes + `\
+# for file in ~/.maildir/.*; do \
+#   box=$(basename "$file"); \
+#   if [ ! "$box" = '.' -a ! "$box" = '..' -a ! "$box" = '.customflags' \
+#       -a ! "$box" = '.subscriptions' ]; then \
+#     echo -n "\"+$box\" "; \
+#   fi; \
+#done; \
+# for folder in ~/.maildir/*; do \
+#   if [ -x $folder]; then \
+#         box=$(basename "$folder"); \
+#         for file in ~/.maildir/$box/.*; do \
+#                box2=$(basename "$file"); \
+#                if [ ! "$box2" = '.' -a ! "$box2" = '..' -a ! "$box2" = '.customflags' \
+#                 -a ! "$box2" = '.subscriptions' ]; then \
+#                   echo -n "\"+$box/$box2\" "; \
+#                fi; \
+#         done; \
+#    fi; \
+#done`
+
+
+

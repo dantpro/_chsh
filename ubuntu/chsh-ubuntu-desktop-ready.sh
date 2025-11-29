@@ -1,5 +1,9 @@
 #! /bin/sh
+
+# ~/bin/chsh-ubuntu-desktop-ready.sh
 #
+# $Id: chsh-ubuntu-desktop-ready.sh,v 1.1 2025/11/29 13:50:04 dant Exp $
+
 # --- Ubuntu 25.10
 
 # --- localization
@@ -673,6 +677,7 @@ sudo apt install -y ubuntu-restricted-extras
 sudo apt install -y mplayer
 sudo apt install -y mpv
 sudo apt install -y celluloid
+sudo att install -y showtime
 #
 sudo apt install -y mediainfo mediainfo-gui
 sudo apt install -y ffmpeg

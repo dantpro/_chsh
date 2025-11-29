@@ -677,7 +677,7 @@ sudo apt install -y ubuntu-restricted-extras
 sudo apt install -y mplayer
 sudo apt install -y mpv
 sudo apt install -y celluloid
-sudo att install -y showtime
+sudo apt install -y showtime
 #
 sudo apt install -y mediainfo mediainfo-gui
 sudo apt install -y ffmpeg

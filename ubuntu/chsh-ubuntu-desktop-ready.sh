@@ -2,7 +2,7 @@
 
 # ~/bin/chsh-ubuntu-desktop-ready.sh
 #
-# $Id: chsh-ubuntu-desktop-ready.sh,v 1.3 2025/11/30 14:53:11 dant Exp $
+# $Id: chsh-ubuntu-desktop-ready.sh,v 1.4 2025/11/30 16:11:44 dant Exp $
 
 # --- Ubuntu 25.10
 
@@ -492,7 +492,7 @@ sudo apt install -y gnome-session
 # sudo apt install -y gnome-system-monitor
 # sudo apt install -y gnome-disk-utility
 #
-# sudo apt install gnome-terminal
+sudo apt install -y gnome-terminal
 # sudo update-alternatives --config x-terminal-emulator
 
 #--- https://ubuntuhandbook.org/index.php/2021/04/enable-light-mode-menus-ubuntu-21-04/
@@ -506,6 +506,7 @@ sudo apt install -y gnome-tweaks
 # sudo apt install -y gnome-calendar
 # sudo apt install -y gnome-todo
 sudo apt install -y gnome-weather
+sudo apt install -y gnome-screenshot
 
 # gnome text editors
 #

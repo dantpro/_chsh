@@ -2,7 +2,7 @@
 
 # ~/bin/chsh-ubuntu-desktop-ready.sh
 #
-# $Id: chsh-ubuntu-desktop-ready.sh,v 1.2 2025/11/30 14:39:15 dant Exp $
+# $Id: chsh-ubuntu-desktop-ready.sh,v 1.3 2025/11/30 14:53:11 dant Exp $
 
 # --- Ubuntu 25.10
 
@@ -1185,7 +1185,7 @@ sudo kvm-ok
 # sudo chmod a+r /etc/apt/keyrings/keys.anydesk.com.asc
 #
 ## Add the AnyDesk apt repository
-# echo "deb [signed-by=/etc/apt/keyrings/keys.anydesk.com.asc] https://deb.anydesk.com all main" | sudo tee /etc/apt/sources.
+# echo "deb [signed-by=/etc/apt/keyrings/keys.anydesk.com.asc] https://deb.anydesk.com all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list > /dev/null
 #
 ## Update apt caches and install the AnyDesk client
 # sudo apt update

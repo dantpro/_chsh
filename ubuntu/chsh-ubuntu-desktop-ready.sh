@@ -2,7 +2,7 @@
 
 # ~/bin/chsh-ubuntu-desktop-ready.sh
 #
-# $Id: chsh-ubuntu-desktop-ready.sh,v 1.1 2025/11/29 13:50:04 dant Exp $
+# $Id: chsh-ubuntu-desktop-ready.sh,v 1.2 2025/11/30 14:39:15 dant Exp $
 
 # --- Ubuntu 25.10
 
@@ -677,7 +677,7 @@ sudo apt install -y ubuntu-restricted-extras
 sudo apt install -y mplayer
 sudo apt install -y mpv
 sudo apt install -y celluloid
-sudo apt install -y showtime
+sudo att install -y showtime
 #
 sudo apt install -y mediainfo mediainfo-gui
 sudo apt install -y ffmpeg
@@ -1174,7 +1174,24 @@ sudo kvm-ok
 #
 # sudo apt install -y qemu-guest-agent
 
-#--- lamp
+# --- anydesk
+# https://deb.anydesk.com/howto.html
+#
+## Add the AnyDesk GPG key
+# sudo apt update
+# sudo apt install ca-certificates curl apt-transport-https
+# sudo install -m 0755 -d /etc/apt/keyrings
+# sudo curl -fsSL https://keys.anydesk.com/repos/DEB-GPG-KEY -o /etc/apt/keyrings/keys.anydesk.com.asc
+# sudo chmod a+r /etc/apt/keyrings/keys.anydesk.com.asc
+#
+## Add the AnyDesk apt repository
+# echo "deb [signed-by=/etc/apt/keyrings/keys.anydesk.com.asc] https://deb.anydesk.com all main" | sudo tee /etc/apt/sources.
+#
+## Update apt caches and install the AnyDesk client
+# sudo apt update
+# sudo apt install anydesk
+
+# --- lamp
 
 # apache
 #

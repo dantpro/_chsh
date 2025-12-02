@@ -1,6 +1,6 @@
 #!/bin/bash
 
-date=$(date +%Y-%m-%d-%H%M%S)
+date=$(date +%y%m%d-%H%M%S)
 comment=$(curl -L -s http://whatthecommit.com/index.txt)
 
 git add .

@@ -2,7 +2,7 @@
 
 # ~/bin/chsh-ubuntu-desktop-ready.sh
 #
-# $Id: chsh-ubuntu-desktop-ready.sh,v 1.5 2025/12/03 08:21:08 dant Exp $
+# $Id: chsh-ubuntu-desktop-ready.sh,v 1.4 2025/11/30 16:11:44 dant Exp $
 
 # --- Ubuntu 25.10
 

@@ -1,6 +1,6 @@
-# $Id: .bash_aliases,v 1.1 2025/12/06 16:55:27 dant Exp $
+# $Id: .bash_aliases,v 1.2 2025/12/06 17:02:43 dant Exp $
 #
-# ~./.bash_aliases - bash aliaces
+# ~/.bash_aliases
 
 # cd
 #

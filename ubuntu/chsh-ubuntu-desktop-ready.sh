@@ -2,7 +2,7 @@
 
 # ~/bin/chsh-ubuntu-desktop-ready.sh
 #
-# $Id: chsh-ubuntu-desktop-ready.sh,v 1.6 2025/12/06 14:39:20 dant Exp $
+# $Id: chsh-ubuntu-desktop-ready.sh,v 1.7 2025/12/06 19:14:28 dant Exp $
 
 # --- Ubuntu 25.10
 
@@ -1282,6 +1282,10 @@ sudo apt install -y mariadb-server mariadb-client
 # sudo apt install -y postgresql
 # sudo systemctl status postgresql.service
 # sudo systemctl disable  postgresql
+#
+# sudo snap install pgadmin4
+# sudo snap connect pgadmin4:password-manager-service
+# sudo snap connect pgadmin4:home
 
 # sqlite
 #

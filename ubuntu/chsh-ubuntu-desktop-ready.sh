@@ -2,7 +2,7 @@
 
 # ~/bin/chsh-ubuntu-desktop-ready.sh
 #
-# $Id: chsh-ubuntu-desktop-ready.sh,v 1.5 2025/12/03 08:21:08 dant Exp $
+# $Id: chsh-ubuntu-desktop-ready.sh,v 1.6 2025/12/06 14:39:20 dant Exp $
 
 # --- Ubuntu 25.10
 
@@ -29,7 +29,7 @@ sudo apt install -y console-cyrillic
 #
 # locale-gen ru_RU.UTF-8
 # sudo locale-gen --purge ru_RU.UTF-8 en_US.UTF-8
-# sudo locale-gen --purge ru_RU.UTF-8 en_US.UTF-8 
+# sudo locale-gen --purge ru_RU.UTF-8 en_US.UTF-8
 #
 # sudo vim /var/lib/locales/supported.d/en
 # --- sudo rm -rfv /usr/lib/locale/*
@@ -55,7 +55,7 @@ sudo apt install -y dconf-editor
 dconf reset -f /org/gnome/shell/extensions/dash-to-dock/
 #
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
-gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false 
+gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 #
 # gsettings set org.gnome.shell.extensions.dash-to-dock dock-position show-mounts-only-mounted true
@@ -155,7 +155,7 @@ sudo apt install -y systemd-timesyncd
 sudo timedatectl set-ntp true
 # sudo systemctl enable --now systemd-timesyncd.service
 
-# --- /etc/systemd/timesyncd.conf.d/10-timesyncd.conf 
+# --- /etc/systemd/timesyncd.conf.d/10-timesyncd.conf
 # [Time]
 # NTP=time1.google.com time2.google.com time3.google.com time4.google.com time.google.com
 # FallbackNTP= ru.pool.ntp.org
@@ -280,10 +280,10 @@ sudo apt install -y lhasa
 sudo apt install -y odt2txt
 
 # conky
-sudo apt install -y conky-all # conky-std conky-cli 
+sudo apt install -y conky-all # conky-std conky-cli
 
 # web
-sudo apt install -y links 
+sudo apt install -y links
 sudo apt install -y lynx
 sudo apt install -y w3m
 sudo apt install -y elinks
@@ -389,7 +389,7 @@ sudo apt install -y hwinfo
 # https://launchpad.net/~linrunner/+archive/ubuntu/tlp
 # sudo add-apt-repository ppa:linrunner/tlp
 # sudo apt install -y tlp
-# sudo tlp start 
+# sudo tlp start
 # sudo tlp-stat
 # sudo apt install -y tlp
 
@@ -401,7 +401,7 @@ sudo apt install -y hwinfo
 sudo apt install -y ncdu
 sudo apt install -y discus
 
-# multi terminal 
+# multi terminal
 #
 sudo apt install -y screen
 sudo apt install -y tmux
@@ -410,7 +410,7 @@ sudo apt install -y byobu
 sudo apt install -y dos2unix
 sudo apt install -y colordiff
 
-# hw monitoring 
+# hw monitoring
 #
 sudo apt install -y lm-sensors
 #
@@ -444,7 +444,7 @@ sudo apt install -y gpart
 #--- xwindow
 #
 # X11/xorg
-# sudo apt install -y xorg 
+# sudo apt install -y xorg
 # sudo apt install -y xinit
 #
 # x11 dm
@@ -455,7 +455,7 @@ sudo apt install -y gpart
 #
 # x11 wm
 #
-# sudo apt install -y openbox 
+# sudo apt install -y openbox
 # sudo apt install -y openbox-gnome-session
 
 #
@@ -466,7 +466,7 @@ sudo apt install -y gpart
 # sudo apt install -y terminator
 
 # x-bar
-# 
+#
 # sudo apt install -y plank # x11 only
 
 # --- xfce
@@ -621,12 +621,12 @@ sudo apt install -y geany
 # https://remarkableapp.github.io/
 # sudo snap install remarkable --classic
 #
-# sudo apt install retext 
+# sudo apt install retext
 
 # cipboard
 # sudo apt install -y gpaste-2
 
-#--- ubuntu desktop minimal to full 
+#--- ubuntu desktop minimal to full
 #
 # sudo apt install -y baobab
 # sudo apt install -y branding-ubuntu
@@ -708,7 +708,7 @@ sudo apt install -y vlc
 
 # smplayer qt
 #
-# sudo apt install -y smplayer 
+# sudo apt install -y smplayer
 #
 # sudo add-apt-repository -y ppa:rvm/smplayer
 # smtube smplayer-themes smplayer-skins
@@ -718,7 +718,7 @@ sudo apt install -y vlc
 # sudo add-apt-repository -y ppa:team-xbmc/ppa
 
 # openshot
-# --- sudo apt install -y openshot 
+# --- sudo apt install -y openshot
 # --- sudo apt install -y kdenlive
 
 # obs-studio
@@ -749,7 +749,7 @@ sudo apt install -y libimage-exiftool-perl # exiftool https://exiftool.org/
 
 # scan
 #
-# sudo apt install -y sane 
+# sudo apt install -y sane
 # sudo apt install -y xsane
 # sudo sane-find-scanner
 # xsane &
@@ -798,7 +798,7 @@ sudo apt install -y libimage-exiftool-perl # exiftool https://exiftool.org/
 # inkscape
 # sudo apt install -y inkscape
 
-# shutter 
+# shutter
 # sudo apt apt install -y shutter
 
 # 3D
@@ -834,7 +834,7 @@ sudo apt install -y grsync
 
 # wireless
 #
-# sudo apt install -y wpasupplicant 
+# sudo apt install -y wpasupplicant
 # sudo apt install -y wavemon
 
 # net tools
@@ -1013,7 +1013,7 @@ sudo apt install -y golang-go
 # sudo dpkg -i <file>.deb
 # sudo apt-get install -f # Install dependencies
 #
-# To automatically install the apt repository and signing key, such as on a non-interactive terminal, 
+# To automatically install the apt repository and signing key, such as on a non-interactive terminal,
 # run the following command first:
 #
 # echo "code code/add-microsoft-repo boolean true" | sudo debconf-set-selections
@@ -1108,7 +1108,7 @@ sudo apt install -y golang-go
 #
 # wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 # sudo apt install ./google-chrome-stable_current_amd64.deb
-# 
+#
 # --- wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 # --- sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 #
@@ -1120,19 +1120,24 @@ sudo apt install -y golang-go
 #
 # sudo apt modernize-sources
 
-# chromium 
+# chromium
 #
 sudo apt install -y chromium-browser
 # sudo snap install chromium
 # sudo snap remove chromium
-#  
+#
 # sudo apt install -y chromium-codecs-ffmpeg
 # sudo apt install -y chromium-codecs-ffmpeg-extra
+
+# yandex
+#
+# wget https://browser.yandex.ru/download/?os=linux -O yandex-browser.deb
+# sudo apt install -y ./yandex-browser.deb
 
 # tor
 # sudo apt install -y torbrowser-launcher
 
-# i2p 
+# i2p
 # https://geti2p.net/en/
 #
 # sudo apt-add-repository ppa:i2p-maintainers/i2p
@@ -1154,7 +1159,7 @@ sudo apt install -y chromium-browser
 # forum.i2p - forum;
 # rusleaks.i2p — wiki leaks;
 
-#--- vt 
+#--- vt
 
 # wine
 #
@@ -1171,14 +1176,14 @@ sudo apt install -y virt-what
 #
 # sudo apt install -y virtualbox
 
-# kvm 
+# kvm
 #
 # http://www.cyberciti.biz/faq/how-to-install-kvm-on-ubuntu-linux-14-04/
 #
 sudo apt install -y cpu-checker
 sudo kvm-ok
-# sudo apt install -y qemu-kvm 
-# sudo apt install -y libvirt-clients 
+# sudo apt install -y qemu-kvm
+# sudo apt install -y libvirt-clients
 # sudo apt install -y libvirt-daemon-system
 # sudo apt install -y bridge-utils
 # sudo apt install -y virt-manager
@@ -1211,7 +1216,7 @@ sudo apt install -y apache2
 # sudo chown www-data:www-data /var/www/html/ -R
 #
 # sudo apt install -y libapache2-mod-php
-# sudo a2dismod php8.4 
+# sudo a2dismod php8.4
 # sudo a2enmod php8.4
 # sudo systemctl restart apache2
 
@@ -1279,7 +1284,7 @@ sudo apt install -y mariadb-server mariadb-client
 # sudo systemctl disable  postgresql
 
 # sqlite
-# 
+#
 # https://launchpad.net/~linuxgndu/+archive/ubuntu/sqlitebrowser
 #
 # sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser
@@ -1294,13 +1299,13 @@ sudo apt install -y phpsysinfo
 #
 # http://localhost/phpsysinfo
 #
-# cat /etc/apache2/conf-available/50-phpsysinfo.conf 
+# cat /etc/apache2/conf-available/50-phpsysinfo.conf
 # cat /etc/phpsysinfo/apache.conf
 #
-# sudo a2enconf 50-phpsysinfo 
+# sudo a2enconf 50-phpsysinfo
 # sudo a2disconf 50-phpsysinfo
 # sudo systemctl reload apache2
-# 
+#
 
 #--- /etc/phpsysinfo/apache.conf
 #
@@ -1346,7 +1351,7 @@ sudo apt install -y phpsysinfo
 sudo apt install -y smbclient
 sudo apt install -y cifs-utils
 
-# sudo apt install -y samba-common samba winbind 
+# sudo apt install -y samba-common samba winbind
 # sudo apt install -y krb5-user # kerberos
 # sudo apt install -y libpam-krb5 libpam-winbind libnss-winbind
 #
@@ -1364,7 +1369,7 @@ sudo apt install -y cifs-utils
 # smbclient -k -L <dom-srv-adc-1>
 
 # --- sssd + ad + realmd
-# 
+#
 # sudo hostnamectl set-hostname <dom-lin-1.domain.dom> # host fqdn for system keytab
 #
 sudo apt install -y sssd sssd-tools sssd-ad # sssd
@@ -1375,7 +1380,7 @@ sudo apt install -y oddjob oddjob-mkhomedir packagekit # d-bus homedir
 #
 # --- samba
 # --- sudo apt install -y samba-common-bin samba-libs
-# --- sudo apt install -y libpam-krb5 
+# --- sudo apt install -y libpam-krb5
 #
 # sudo pam-auth-update # create home directory on login
 #
@@ -1383,7 +1388,7 @@ sudo apt install -y oddjob oddjob-mkhomedir packagekit # d-bus homedir
 #
 # sudo sss_cache -E
 # sudo sss_cache -u <username>
-#   
+#
 # realm discover -v
 # realm list
 #

@@ -2,7 +2,7 @@
 
 # ~/bin/chsh-ubuntu-desktop-ready.sh
 #
-# $Id: chsh-ubuntu-desktop-ready.sh,v 1.7 2025/12/06 19:14:28 dant Exp $
+# $Id: chsh-ubuntu-desktop-ready.sh,v 1.8 2025/12/10 04:34:41 dant Exp $
 
 # --- Ubuntu 25.10
 
@@ -1448,5 +1448,36 @@ sudo usermod -aG docker $USER
 # docker start -ai <id>
 # docker rm <id>
 # docker images
+
+# --- gns3
+# --- https://docs.gns3.com/docs/getting-started/installation/linux/
+#
+# sudo add-apt-repository ppa:gns3/ppa
+# sudo apt update
+# sudo apt install gns3-gui gns3-server
+#
+# --- gns3 iou support
+#
+# sudo dpkg --add-architecture i386
+# sudo apt update
+# sudo apt install gns3-iou
+#
+# --- docker ce
+#
+# sudo apt remove docker docker-engine docker.io
+# sudo snap remove docker
+#
+# sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+#
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#
+# sudo add-apt-repository \
+# "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+# $(. /etc/os-release && echo $VERSION_CODENAME) stable"
+#
+# sudo apt update
+# sudo apt install docker-ce
+#
+# sudo usermod -aG ubridge,libvirt,kvm,wireshark,docker $(whoami)
 
 # ---

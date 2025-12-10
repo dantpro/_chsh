@@ -2,7 +2,7 @@
 
 # ~/bin/chsh-ubuntu-desktop-ready.sh
 #
-# $Id: chsh-ubuntu-desktop-ready.sh,v 1.8 2025/12/10 05:33:41 dant Exp $
+# $Id: chsh-ubuntu-desktop-ready.sh,v 1.9 2025/12/10 05:43:43 dant Exp $
 
 # --- Ubuntu 25.10
 
@@ -1187,6 +1187,9 @@ sudo kvm-ok
 # sudo apt install -y libvirt-daemon-system
 # sudo apt install -y bridge-utils
 # sudo apt install -y virt-manager
+#
+# sudo usermod -aG libvirt $USER
+# sudo systemctl enable --now libvirtd
 #
 # sudo apt install -y qemu-guest-agent
 
